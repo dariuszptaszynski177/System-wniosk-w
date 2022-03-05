@@ -1,0 +1,24 @@
+<?php 
+/****************************************************** 
+* connection.php 
+* konfiguracja po³±czenia z baz± danych 
+******************************************************/ 
+
+function connection() { 
+    // serwer 
+    $mysql_server = "localhost"; 
+    // admin 
+    $mysql_admin = "dariuszpta_darek"; 
+    // has³o 
+    $mysql_pass = "ZAQwsx123"; 
+    // nazwa baza 
+    $mysql_db = "dariuszpta_baza"; 
+    // nawi±zujemy po³±czenie z serwerem MySQL 
+    @mysql_connect($mysql_server, $mysql_admin, $mysql_pass) 
+    or die('Brak po³±czenia z serwerem MySQL.'); 
+    // ³±czymy siê z baz± danych 
+    @mysql_select_db($mysql_db) 
+    or die('B³±d wyboru bazy danych.'); 
+} 
+
+?>
